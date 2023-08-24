@@ -36,16 +36,16 @@ export const App = () => {
 
   return (
     <>
-      <Globals></Globals>
+      <Globals />
       <Section title="Please leave feedback">
         <FeedbackOptions
           options={['good', 'neutral', 'bad']}
           onLeaveFeedback={onLeaveFeedback}
-        ></FeedbackOptions>
+        />
       </Section>
       <Section title="Statistics">
         {countTotalFeedback === 0 ? (
-          <Notification message="There is no feedback"></Notification>
+          <Notification message="There is no feedback" />
         ) : (
           <Statistics
             good={good}
@@ -53,7 +53,7 @@ export const App = () => {
             bad={bad}
             total={countTotalFeedback()}
             positivePercentage={countPositiveFeedbackPercentage()}
-          ></Statistics>
+          />
         )}
       </Section>
     </>
